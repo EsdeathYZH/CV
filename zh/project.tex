@@ -1,0 +1,116 @@
+%----------------------------------------------------------------------------------------
+%	SECTION TITLE
+%----------------------------------------------------------------------------------------
+
+\cvsection{Projects}
+
+%----------------------------------------------------------------------------------------
+%	SECTION CONTENT
+%----------------------------------------------------------------------------------------
+
+\cvsubsection{\textbf{Graph Systems for Hybrid Workload}}
+
+\vspace{1mm}
+
+\begin{cventries}
+
+%------------------------------------------------
+
+\cventry
+{开发者} % Affiliation/role
+{Vegito+G: 大规模关系型事务与图分析混合处理引擎} % Organization/group
+{智能计算实验室，达摩院，阿里巴巴} % Location
+{2021.10 - 至今} % Date(s)
+{ % Description(s) of experience/contributions/knowledge
+	\begin{cvitems}
+		  \item {本项目的目标是构建一个松耦合的实时图分析系统（OLAP），系统能够实时消费现有关系型数据源（OLTP）提供的数据；}
+		  \item {我在本项目中负责设计关系型模型到图模型的映射接口，并构建高性能动态图存储及实时分析引擎；}
+		 \item {经过测试，系统相比现有Graph HTAP系统LiveGraph在图计算负载（例：PageRank，SSSP）获得最高\emphstyle{2.2倍}的性能提升。}
+	\end{cvitems} 
+}
+
+\vspace{-3mm}
+
+\cventry
+{作者} % Affiliation/role
+{Graphy: 面向流水线式图应用的大规模处理系统} % Organization/group
+{并行与分布式系统研究所，上海交通大学} % Location
+{2020.6 - 至今} % Date(s)
+{ % Description(s) of experience/contributions/knowledge
+	\begin{cvitems}
+	 \item {本项目为蚂蚁金服合作项目，目标是构建一个面向流水线式图应用（例：Gremlin查询+图分析）的大规模图处理系统；}
+	 \item {独立完成了该项目的系统设计到实验测试，从数据转换与数据移动两方面减少流水线图应用中的巨额开销；}
+	 \item {测试典型流水线应用时延，Graphy相比拼接现有图系统方案（Wukong+Gemini）能够获得\emphstyle{41倍}的性能提升；相比传统分布式数据处理系统（Spark）能够获得\emphstyle{59倍}的性能提升。}
+	\end{cvitems}
+}
+
+\end{cventries}
+
+\vspace{-2mm}
+
+\cvsubsection{\textbf{Graph Systems for Specific Workload}}
+
+\vspace{1mm}
+
+\begin{cventries}
+
+\cventry
+{作者} % Affiliation/role
+{Wukong+G: 基于GPU加速的大规模RDF查询系统} % Organization/group
+{并行与分布式系统研究所，上海交通大学} % Location
+{2020.12 - 2021.10} % Date(s)
+{ % Description(s) of experience/contributions/knowledge
+	\begin{cvitems}
+		\item {本项目使用GPU来加速大规模知识图谱存储上的RDF查询负载，并通过多查询合并技术提升多任务场景下的系统吞吐；}
+		\item {独立完成项目系统实现及投稿，项目论文“Wukong+G: Fast and Concurrent RDF Query Processing Using RDMA-Assisted GPU Graph Exploration.”已经被\emphstyle{TPDS'2022}接收。}
+	\end{cvitems}
+}
+
+\vspace{-3mm}
+
+\cventry
+{开发者} % Affiliation/role
+{FlexGraph: 大规模图神经网络训练系统} % Organization/group
+{智能计算实验室，达摩院，阿里巴巴} % Location
+{2019.12 - 2020.10} % Date(s)
+{ % Description(s) of experience/contributions/knowledge
+	\begin{cvitems}
+	 \item {本项目构建了一个高效的大规模图神经网络训练框架，面向新兴的GNN算法提出了表达性更好的NAU抽象模型；}
+	 \item {我在本项目中负责原型系统构建及分布式测试，使用PowerGraph构建了分布式GNN训练系统原型；}
+	 \item {项目论文“FlexGraph: A Flexible and Efficient Distributed Framework for GNN Training.”已经被\emphstyle{EuroSys'2021}接收。}
+	\end{cvitems}
+}
+
+\vspace{-3mm}
+
+\cventry
+{作者} % Affiliation/role
+{HyperCache: 基于超图索引加速的RDF查询系统} % Organization/group
+{并行与分布式系统研究所，上海交通大学} % Location
+{2021.10 - 至今} % Date(s)
+{ % Description(s) of experience/contributions/knowledge
+	\begin{cvitems}
+	 \item {使用多元关系缓存来提升RDF查询负载的性能，为现有RDF查询系统构建了一套可扩展的分布式缓存方案；}
+	 \item {提出基于关系树的缓存元数据存储方案，相比现有的Bliss标签方案在缓存匹配阶段获得\emphstyle{10倍}的性能提升；}
+	 \item {经过测试，这套解决方案可以在有限的内存空间（1GB）下为端到端查询提供\emphstyle{最高15倍}的性能提升。}
+	\end{cvitems}
+}
+
+\vspace{-3mm}
+
+\cventry
+{作者} % Affiliation/role
+{Gemini-L: 基于混合Push/Pull计算模型的图计算系统} % Organization/group
+{并行与分布式系统研究所，上海交通大学} % Location
+{2020.4 - 2020.6} % Date(s)
+{ % Description(s) of experience/contributions/knowledge
+	\begin{cvitems}
+	 \item {本系统是实现Graphy中分布式图计算引擎时衍生的想法：通过混合传统图计算中的Push/Pull模型来减少网络通讯；}
+	 \item {经过测试，该系统能够在PageRank负载下最高减少\emphstyle{40\%}网络传输数据量，相比Gemini系统获得了\emphstyle{1.3倍}的性能提升；}
+	 \item {该项目已在github开源：https://github.com/EsdeathYZH/Gemini-L。}
+	\end{cvitems}
+}
+
+%%------------------------------------------------
+
+\end{cventries}
